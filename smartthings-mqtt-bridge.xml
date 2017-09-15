@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Beta>False</Beta>
+  <Category>HomeAutomation:</Category>
+  <Name>smartthings-mqtt-bridge</Name>
+  <Overview>A bridge between SmartThings and MQTT</Overview>
+  <license>Apache-2</license>
+  <Project>https://github.com/stjohnjohnson/smartthings-mqtt-bridge</Project>
+  <Support>https://home-assistant.io/help/</Support>
+  <Description>
+    A bridge between SmartThings and MQTT.[br][br]
+    SmartThings MQTT bridge will be on port 8070.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : in this path, SmartThings MQTT Bridge will store it's configuration files.
+  </Description>
+  <Registry>https://hub.docker.com/r/stjohnjohnson/smartthings-mqtt-bridge/</Registry>
+  <GitHub>https://github.com/stjohnjohnson/smartthings-mqtt-bridge</GitHub>
+  <Repository>stjohnjohnson/smartthings-mqtt-bridge</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8070</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/smartthings-mqtt-bridge/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://hub.docker.com/r/stjohnjohnson/smartthings-mqtt-bridge/</WebUI>
+  <Banner>https://github.com/dawsonbessinger/unraid-docker-templates/raw/master/smartthings-mqtt-bridge-banner.png</Banner>
+  <Icon>https://github.com/dawsonbessinger/unraid-docker-templates/raw/master/smartthings-mqtt-bridge-icon.png</Icon>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/smartthings-mqtt-bridge" Mode="rw" Description="This path is where SmartThings MQTT Bridge will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
