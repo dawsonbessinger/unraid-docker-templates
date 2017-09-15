@@ -37,7 +37,7 @@
     </Volume>
   </Data>
   <WebUI>https://hub.docker.com/r/stjohnjohnson/smartthings-mqtt-bridge/</WebUI>
-  <Banner>https://github.com/dawsonbessinger/unraid-docker-templates/raw/master/smartthings-mqtt-bridge-banner.png</Banner>
-  <Icon>https://github.com/dawsonbessinger/unraid-docker-templates/raw/master/smartthings-mqtt-bridge-icon.png</Icon>
+  <Banner>https://github.com/dawsonbessinger/unraid-docker-templates/dawsonbessinger/raw/master/smartthings-mqtt-bridge-banner.png</Banner>
+  <Icon>https://github.com/dawsonbessinger/unraid-docker-templates/dawsonbessinger/raw/master/smartthings-mqtt-bridge-icon.png</Icon>
   <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/smartthings-mqtt-bridge" Mode="rw" Description="This path is where SmartThings MQTT Bridge will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"/>
 </Containers>
