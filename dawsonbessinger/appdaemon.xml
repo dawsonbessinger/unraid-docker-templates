@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Beta>False</Beta>
+  <Category>HomeAutomation:</Category>
+  <Name>HASS AppDaemon</Name>
+  <Overview>AppDaemon is a loosely coupled, multithreaded, sandboxed python execution environment for writing automation apps for Home Assistant</Overview>
+  <license>Apache-2</license>
+  <Project>https://github.com/home-assistant/appdaemon</Project>
+  <Support>https://home-assistant.io/help/</Support>
+  <Description>
+    AppDaemon is a sandboxed python execution environment for writing automation apps[br][br]
+    AppDaemon will be on port 5050.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/conf[/b] : in this path, AppDaemon will store it's configuration files.
+  </Description>
+  <Registry>https://hub.docker.com/r/mezz64/appdaemon/</Registry>
+  <GitHub>https://github.com/mezz64/appdaemon-docker</GitHub>
+  <Repository>mezz64/appdaemon-docker</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/AppDaemon/</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://hub.docker.com/r/mezz64/appdaemon/</WebUI>
+  <Banner>https://github.com/dawsonbessinger/unraid-docker-templates/dawsonbessinger/raw/master/appdaemon-banner.png</Banner>
+  <Icon>https://github.com/dawsonbessinger/unraid-docker-templates/dawsonbessinger/raw/master/appdaemon-icon.png</Icon>
+  <Config Name="Conf Directory" Target="/conf" Default="/mnt/user/appdata/AppDaemon" Mode="rw" Description="This path is where AppDaemon will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"/>
+</Containers>
